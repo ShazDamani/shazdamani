@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Karla:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --abyss: #081420;
+  --deep: #0b1b2e;
+  --shoal: #13314a;
+  --line: #1e3a52;
+  --slate: #3e6b8c;
+  --sounding: #2c4a66;
+  --mist: #c8d8e4;
+  --foam: #ede8dc;
+  --kelp: #5dcaa5;
+  --paleteal: #9fe1cb;
+  --lantern: #d7f75b;
+  --brass: #ef9f27;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Karla', -apple-system, BlinkMacSystemFont, sans-serif;
+  --mono: 'Space Mono', Menlo, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--mist);
+  background: linear-gradient(180deg, #0a1a2c 0%, #081420 45%, #050d17 100%) fixed;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  color: var(--foam);
+  line-height: 1.25;
+}
+
+h1 { font-size: 1.6rem; }
+h2 { font-size: 1.25rem; }
+h3 { font-size: 1.05rem; }
+
+a {
+  color: var(--paleteal);
+  text-decoration: underline;
+  text-decoration-color: rgba(93, 202, 165, 0.35);
+  text-underline-offset: 3px;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+
+a:hover {
+  color: var(--lantern);
+  text-decoration-color: rgba(215, 247, 91, 0.5);
+  text-shadow: 0 0 16px rgba(215, 247, 91, 0.35);
+}
+
+:focus-visible {
+  outline: 2px solid var(--lantern);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+::selection {
+  background: rgba(93, 202, 165, 0.3);
+  color: var(--foam);
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2.5rem 1.4rem 3rem;
+}
+
+.mono {
+  font-family: var(--mono);
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--kelp);
+  margin: 0 0 0.75rem;
+}
+
+.meta {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--slate);
+}
+
+hr.rule {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 2.25rem 0;
+}
+
+.prose p {
+  margin: 0 0 1.1rem;
+}
+
+.prose h2 {
+  margin: 2rem 0 0.75rem;
+}
+
+.prose blockquote {
+  margin: 1.25rem 0;
+  padding-left: 1rem;
+  border-left: 2px solid var(--kelp);
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--foam);
+}
+
+.prose ul {
+  padding-left: 1.25rem;
+}
+
+.prose img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 1.75rem 0 0.5rem;
+  border: 1px solid var(--line);
+}
+
+.prose img + em,
+.prose figcaption {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--slate);
+  margin: 0 0 1.75rem;
+  text-align: center;
+}
+
+.prose p > img:only-child {
+  margin-bottom: 1.75rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  background: rgba(14, 34, 56, 0.8);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: var(--mist);
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  padding: 0.6rem 0.75rem;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--kelp);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(93, 202, 165, 0.15);
+}
+
+button {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  background: transparent;
+  color: var(--lantern);
+  border: 1px solid var(--lantern);
+  border-radius: 4px;
+  padding: 0.55rem 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  background: rgba(215, 247, 91, 0.08);
+  box-shadow: 0 0 18px rgba(215, 247, 91, 0.18);
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 1.75rem 1.1rem 2.5rem;
+  }
+}
